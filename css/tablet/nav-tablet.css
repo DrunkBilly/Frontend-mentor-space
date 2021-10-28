@@ -1,5 +1,13 @@
 @media only screen and (max-width: 768px) {
+    .nav-menu{
+        width: 70%;
+    }
+    
     .nav-item-link::before{
         content: none;
+    }
+
+    .nav-line{
+        display: none;
     }
 }

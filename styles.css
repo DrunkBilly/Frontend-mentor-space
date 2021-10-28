@@ -17,16 +17,16 @@ a{
     counter-reset: technology-nav;
 
     --client-height: 100vh;
-    
+
     scroll-behavior: smooth;
 }
-section{counter-increment: section;}
+.section{counter-increment: section;}
 
 main{
     display: flex;
     flex-direction: row;
 }
-main > section{
+main > .section{
     flex: 0 0 100vw;
 }
 

@@ -24,31 +24,36 @@ const technologyNavItems = document.getElementsByClassName("technology-nav-item"
 
 //Main navigation
 btnHome.addEventListener('click', () => { //Home
-    moveBody("0");
+    page = 0;
+    moveBody(0);
     removeClass(navItems, 'nav-item-selected');
     btnHome.classList.add('nav-item-selected');
 })
 
 btnDestination.addEventListener('click', () => { //Destinations
-    moveBody("-100");
+    page = 1;
+    moveBody(1);
     removeClass(navItems, 'nav-item-selected');
     btnDestination.classList.add('nav-item-selected');
 })
 
 btnExplore.addEventListener('click', () => { //Destinations
-    moveBody("-100");
+    page = 1;
+    moveBody(1);
     removeClass(navItems, 'nav-item-selected');
     btnDestination.classList.add('nav-item-selected');
 })
 
 btnCrew.addEventListener('click', () =>{ //Crew
-    moveBody("-200");
+    page = 2
+    moveBody(2);
     removeClass(navItems, 'nav-item-selected');
     btnCrew.classList.add('nav-item-selected');
 })
 
 btnTechnology.addEventListener('click', () =>{ //Crew
-    moveBody("-300");
+    page = 3;
+    moveBody(3);
     removeClass(navItems, 'nav-item-selected');
     btnTechnology.classList.add('nav-item-selected');
 })
@@ -115,11 +120,11 @@ technologyNavItems[2].addEventListener('click', () =>{
     technologyNavItems[2].classList.add('technology-nav-item-selected');
 });
 
-function moveBody(amount){
+function moveBody(page){
     if(document.body.clientWidth <= 768){
-        body.style.marginTop = amount + "vh";
+        body.style.marginTop = page * -100 + "vh";
     }
     else{
-        body.style.marginLeft = amount + "vw";
+        body.style.marginLeft = page * -100 + "vw";
     }
 }

@@ -3,6 +3,8 @@
     grid: 45% 50% 5% / 1fr 1fr;
     place-items: center;
 
+    flex-shrink: 0;
+
     width: 100vw;
     height: 100vh;
 

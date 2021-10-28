@@ -3,6 +3,7 @@ let siteData;
 let destinations;
 let crew;
 let technology;
+let page = 0;
 
 //set selectors for planet
 const planetBody     = document.querySelector('.destination-planet-body');
@@ -19,7 +20,7 @@ const crewPhoto       = document.querySelector('.crew-photo');
 
 //set selectors for technology
 const technologyName = document.querySelector('.technology-name');
-const technologyDescription = document.querySelector('.technology-info-text');
+const technologyDescription = document.querySelector('.technology-info');
 const technologyPhoto = document.querySelector('.technology-photo');
 
 fetch('data.json')
@@ -52,9 +53,7 @@ function removeClass(nodeList , classToRemove){
 }
     //change destination planet
 function changeDestination(destinationNumber){
-    if(document.body.clientWidth > 768){
-        planetBody.style.backgroundImage = `url('${destinations[destinationNumber].images.png} ')`;
-    }
+    planetBody.style.backgroundImage = `url('${destinations[destinationNumber].images.webp} ')`;
     planetTitle.innerHTML            = destinations[destinationNumber].name;
     planetInfo.innerHTML             = destinations[destinationNumber].description;
     planetDistance.innerHTML         = destinations[destinationNumber].distance;
@@ -65,32 +64,20 @@ function changeCrew(crewNumber){
     crewJob.innerHTML               = crew[crewNumber].role;
     crewName.innerHTML              = crew[crewNumber].name;
     crewDescription.innerHTML       = crew[crewNumber].bio;
-    if(document.body.clientWidth > 768){
-        crewPhoto.style.backgroundImage = `url('${crew[crewNumber].images.png}')`;
-    }
+    crewPhoto.style.backgroundImage = `url('${crew[crewNumber].images.webp}')`;
 }
     //change technology
 function changeTechnology(technologyNumber){
     technologyName.innerHTML = technology[technologyNumber].name;
     technologyDescription.innerHTML = technology[technologyNumber].description;
-    if(document.body.clientWidth > 768){
+    if(window.innerWidth <= 768){
+        technologyPhoto.style.backgroundImage = `url('${technology[technologyNumber].images.landscape}')`;
+    }
+    else{
         technologyPhoto.style.backgroundImage = `url('${technology[technologyNumber].images.portrait}')`;
     }
 }
 
-// document.onload(() => {
-//     setClientHeight();
-// })
-const mainSection = document.querySelector('.body-main-info');
-
-window.addEventListener('resize' , () => {setClientHeight()});
-
-function setClientHeight(){
-    let vh = window.innerHeight *0.01;
-    // console.log(vh);
-    if(document.body.clientWidth >= 769){
-        // root.style.setProperty('--client-height' , document.body.clientHeight)
-        mainSection.style.height = window.innerHeight;
-        console.log(window.innerHeight);
-    }
-}
+window.addEventListener('resize' , () => {
+    moveBody(page);
+});
