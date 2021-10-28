@@ -1,0 +1,119 @@
+.destination{
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    place-items: end center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url(./../assets/destination/background-destination-desktop.jpg) no-repeat;
+    background-size: cover;
+}
+
+.destination-planet{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    height: 60%;
+
+    margin-bottom: 10%;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.destination-planet-title{
+    flex: 0 0 20%;
+
+    font-size: 28px;
+    color: white;
+
+    margin: 0 20%;
+}
+.destination-planet-title::before{
+    content: '0' counter(section);
+    margin-right: 5%;
+    opacity: 0.25;
+}
+
+.destination-planet-item{
+    cursor: pointer;
+    user-select: none;
+}
+.destination-planet-body{
+    width: 100%;
+    aspect-ratio: 1;
+    background: no-repeat center;
+    background-size: contain;
+}
+
+.destination-info-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+
+    width: 70%;
+    height: 60%;
+}
+
+.destination-planet-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    width: 50%;
+    list-style: none;
+
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.destination-title{
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.destination-info{
+    margin-top: -5%;
+    padding-bottom: 10%;
+
+    color: #D0D6F9;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    max-width: 45ch;
+
+    border-bottom: 1px solid #979797;
+}
+
+.destination-travel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    width: 50%;
+
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    overflow: unset;
+
+}
+.destination-distance::before, .destination-time::before{
+    content: '';
+    
+    top: -100%;
+    position: absolute;
+    
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+}
+.destination-distance::before{content: 'AVG. DISTANCE';}
+.destination-time::before{content: 'EST. TRAVEL TIME';}

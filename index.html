@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/destinations.css">
+  <link rel="stylesheet" href="./css/crew.css">
+  <link rel="stylesheet" href="./css/technology.css">
+
+  <script async src="./dataLoad.js"></script>
+  <!-- <script defer src="./nav.js"></script> -->
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet"> 
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <nav class="nav-container">
+    <div class="nav-logo"></div>
+    <ul class="nav-menu">
+      <li id="home"        class="nav-item nav-item-selected"><a class="nav-item-link" href="#">Home</a></li>
+      <li id="destination" class="nav-item"><a class="nav-item-link" href="#">Destination</a></li>
+      <li id="crew"        class="nav-item"><a class="nav-item-link" href="#">Crew</a></li>
+      <li id="technology"  class="nav-item"><a class="nav-item-link" href="#">Technology</a></li>
+    </ul>
+    <div class="nav-line"></div>
+  </nav>
+
+  <main>
+    <section class="body-main-info">
+      <div class="body-main-text">
+        <span class="body-main-text-top">So, you want to travel to</span>
+        <span class="body-main-text-center">Space</span>
+        <span class="body-main-text-bottom">Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!</span>
+      </div>
+      <div class="body-main-explore">
+        Explore
+      </div>
+    </section>
+
+    <section class="destination">
+      <div class="destination-planet">
+        <div class="destination-planet-title">pick your destination</div>
+        <div class="destination-planet-body"></div>
+      </div>
+      <div class="destination-info-body">
+        <div class="destination-planet-nav">
+          <div id="moon"   class="destination-planet-item nav-item-selected">moon</div>
+          <div id="mars"   class="destination-planet-item">mars</div>
+          <div id="europa" class="destination-planet-item">europa</div>
+          <div id="titan"  class="destination-planet-item">titan</div>
+        </div>
+
+        <div class="destination-title"></div>
+        <div class="destination-info"></div>
+        <div class="destination-travel">
+          <div class="destination-distance"></div>
+          <div class="destination-time"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="crew">
+      <div class="crew-personal">
+        <div class="crew-title">meet your crew</div>
+        <div class="crew-info">
+          <div class="crew-job"></div>
+          <div class="crew-name"></div>
+          <div class="crew-description"></div>
+          <ul class="crew-nav">
+            <li class="crew-nav-item crew-nav-item-selected"></li>
+            <li class="crew-nav-item"></li>
+            <li class="crew-nav-item"></li>
+            <li class="crew-nav-item"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="crew-photo"></div>
+    </section>
+
+    <section class="technology">
+      <div class="technology-info">
+        <div class="technology-title">space launch 101</div>
+        <div class="technology-body">
+          <ul class="technology-nav">
+            <li class="technology-nav-item technology-nav-item-selected"></li>
+            <li class="technology-nav-item"></li>
+            <li class="technology-nav-item"></li>
+          </ul>
+          <div class="technology-description">
+            <div class="technology-title-small">the therminology...</div>
+            <div class="technology-name"></div>
+            <div class="technology-info-text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="technology-photo"></div>
+    </section>
+  </main>
+</body>
+</html>

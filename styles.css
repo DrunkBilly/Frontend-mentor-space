@@ -1,0 +1,30 @@
+* , *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;   
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+:root{
+    counter-reset: nav-item;
+    counter-increment: nav-item -1;
+    
+    counter-reset: section;
+
+    counter-reset: technology-nav;
+
+    scroll-behavior: smooth;
+}
+section{counter-increment: section;}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+main > section{
+    flex: 0 0 100vw;
+}
+

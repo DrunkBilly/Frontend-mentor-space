@@ -1,0 +1,123 @@
+.technology{
+    display: grid;
+    grid-template: 1fr / 0.6fr 0.4fr;
+    place-items: end center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url('./../assets/technology/background-technology-desktop.jpg') no-repeat;
+    background-size: cover;
+}
+
+.technology-info{
+    display: flex;
+    flex-direction: column;
+
+    height: 60%;
+    width: 80%;
+
+    margin-bottom: 10%;
+}
+
+.technology-title{
+    flex: 0 0 23%;
+
+    font-size: 28px;
+    color: white;
+
+    margin: 0 15%;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+.technology-title::before{
+    content: '0' counter(section);
+    margin-right: 5%;
+    opacity: 0.25;
+}
+
+.technology-body{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    margin-left: 15%;
+}
+
+.technology-nav{
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+.technology-nav-item{
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    aspect-ratio: 1;
+
+    position: relative;
+
+    color: white;
+    font-size: 200%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #979797;
+
+    counter-increment: technology-nav;
+}
+.technology-nav-item::before{
+    content: counter(technology-nav);
+}
+
+.technology-nav-item-selected{
+    color: #0B0D17;
+    background-color: white;
+    border: none;
+}
+
+.technology-description{
+    flex: 0 0 80%;
+}
+
+.technology-title-small{
+    color: #D0D6F9;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+
+    margin-bottom: 2%;
+}
+
+.technology-name{
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    font-size: 56px;
+    color: white;
+
+    margin-bottom: 10%;
+}
+
+.technology-info-text{
+    max-width: 50ch;
+
+    color: #D0D6F9;
+    font-size: 22px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.technology-photo{
+    width: 80%;
+    height: 60%;
+
+    margin-bottom: 10%;
+
+    background: no-repeat center;
+    background-size: contain;
+}

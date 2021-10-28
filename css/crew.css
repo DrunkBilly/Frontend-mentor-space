@@ -1,0 +1,93 @@
+.crew{
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    place-items: end center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url(./../assets/crew/background-crew-desktop.jpg) no-repeat;
+    background-size: cover;
+}
+
+.crew-personal{
+    display: flex;
+    flex-direction: column;
+
+    /* grid-area: 1 / 1 / 2 / 2; */
+    height: 60%;
+    width: 80%;
+
+    margin-bottom: 10%;
+}
+
+.crew-title{
+    flex: 0 0 30%;
+
+    font-size: 28px;
+    color: white;
+
+    margin: 0 20%;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.crew-title::before{
+    content: '0' counter(section);
+    margin-right: 5%;
+    opacity: 0.25;
+}
+
+.crew-info{
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 70%;
+    
+    margin-left: 20%;
+}
+
+.crew-job{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+}
+
+.crew-name{
+    color: white;
+    font-size: 56px;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+.crew-description{
+    font-size: 22px;
+    color: #D0D6F9;
+    font-family: 'Barlow', sans-serif;
+    max-width: 50ch;
+}
+
+.crew-nav{
+    display: flex;
+    height: 10%;
+    margin-top: auto;
+}
+.crew-nav-item{
+    height: 100%;
+    transform: scale(0.5);
+    aspect-ratio: 1;
+    background-color: #979797;
+    border-radius: 50%;
+}
+.crew-nav-item-selected{
+    background-color: white;
+}
+.crew-photo{
+    height: 80%;
+    width: 60%;
+    background: no-repeat bottom center;
+    background-size: contain;
+}
