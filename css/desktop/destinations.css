@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: url(./../assets/destination/background-destination-desktop.jpg) no-repeat;
+    background: url(./../../assets/destination/background-destination-desktop.jpg) no-repeat;
     background-size: cover;
 }
 

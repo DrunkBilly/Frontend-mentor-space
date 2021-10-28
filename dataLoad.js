@@ -1,3 +1,4 @@
+const root = document.documentElement;
 let siteData;
 let destinations;
 let crew;
@@ -51,7 +52,9 @@ function removeClass(nodeList , classToRemove){
 }
     //change destination planet
 function changeDestination(destinationNumber){
-    planetBody.style.backgroundImage = `url('${destinations[destinationNumber].images.png} ')`;
+    if(document.body.clientWidth > 768){
+        planetBody.style.backgroundImage = `url('${destinations[destinationNumber].images.png} ')`;
+    }
     planetTitle.innerHTML            = destinations[destinationNumber].name;
     planetInfo.innerHTML             = destinations[destinationNumber].description;
     planetDistance.innerHTML         = destinations[destinationNumber].distance;
@@ -62,11 +65,32 @@ function changeCrew(crewNumber){
     crewJob.innerHTML               = crew[crewNumber].role;
     crewName.innerHTML              = crew[crewNumber].name;
     crewDescription.innerHTML       = crew[crewNumber].bio;
-    crewPhoto.style.backgroundImage = `url('${crew[crewNumber].images.png}')`
+    if(document.body.clientWidth > 768){
+        crewPhoto.style.backgroundImage = `url('${crew[crewNumber].images.png}')`;
+    }
 }
     //change technology
 function changeTechnology(technologyNumber){
     technologyName.innerHTML = technology[technologyNumber].name;
     technologyDescription.innerHTML = technology[technologyNumber].description;
-    technologyPhoto.style.backgroundImage = `url('${technology[technologyNumber].images.portrait}')`
+    if(document.body.clientWidth > 768){
+        technologyPhoto.style.backgroundImage = `url('${technology[technologyNumber].images.portrait}')`;
+    }
+}
+
+// document.onload(() => {
+//     setClientHeight();
+// })
+const mainSection = document.querySelector('.body-main-info');
+
+window.addEventListener('resize' , () => {setClientHeight()});
+
+function setClientHeight(){
+    let vh = window.innerHeight *0.01;
+    // console.log(vh);
+    if(document.body.clientWidth >= 769){
+        // root.style.setProperty('--client-height' , document.body.clientHeight)
+        mainSection.style.height = window.innerHeight;
+        console.log(window.innerHeight);
+    }
 }

@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: url(./../assets/home/background-home-desktop.jpg) no-repeat;
+    background: url(./../../assets/home/background-home-desktop.jpg) no-repeat;
     background-size: cover;
 
     transition: margin 0.5s;
@@ -19,7 +19,9 @@
     place-items: center left;
 
     height: 85%;
-    width: 50%;
+    width: 80%;
+
+    margin-left: 20%;
 
     color: white;
     text-transform: uppercase;

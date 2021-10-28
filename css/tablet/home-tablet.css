@@ -1,0 +1,27 @@
+@media only screen and (max-width: 768px) {
+    .body-main-info{
+        height: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-image: url(./../../assets/home/background-home-tablet.jpg);
+    }
+
+    .body-main-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 75%;
+
+        text-align: center;
+
+        margin: 0;
+    }
+
+    .body-main-explore{
+        margin-bottom: 10%;
+    }
+}

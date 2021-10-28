@@ -16,6 +16,8 @@ a{
 
     counter-reset: technology-nav;
 
+    --client-height: 100vh;
+    
     scroll-behavior: smooth;
 }
 section{counter-increment: section;}
@@ -28,3 +30,8 @@ main > section{
     flex: 0 0 100vw;
 }
 
+@media only screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+}
