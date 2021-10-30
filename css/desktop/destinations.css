@@ -51,7 +51,7 @@
 .destination-info-body{
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    justify-content: space-between;
 
     width: 70%;
     height: 60%;
@@ -91,12 +91,12 @@
 }
 
 .destination-travel{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
 
     position: relative;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 25%;
 
     color: white;
     font-family: 'Bellefair', serif;
@@ -105,15 +105,8 @@
     overflow: unset;
 
 }
-.destination-distance::before, .destination-time::before{
-    content: '';
-    
-    top: -100%;
-    position: absolute;
-    
+.destination-distance-title, .destination-time-title{
     color: #D0D6F9;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 14px;
 }
-.destination-distance::before{content: 'AVG. DISTANCE';}
-.destination-time::before{content: 'EST. TRAVEL TIME';}

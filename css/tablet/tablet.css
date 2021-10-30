@@ -20,10 +20,14 @@
         justify-content: start;
 
         height: 50%;
+        width: 100%;
 
         text-align: center;
 
         margin: 0;
+    }
+    .body-main-text-bottom{
+        max-width: 50ch;
     }
 
     .body-main-explore{
@@ -60,15 +64,20 @@
         height: 40%;
         margin-bottom: 3%;
     }
-
+    .destination-info{
+        text-align: center;
+    }
     .destination-planet-body{
         margin-bottom: 5%;
     }
 
     .destination-travel{
-        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
         
         width: 100%;
+        margin-bottom: 0;
+
     }
 
 
@@ -157,6 +166,7 @@
     }
 
     .technology-photo{
+        background-size: cover;
         grid-column: 1/2;
         grid-row: 3/4;
     }

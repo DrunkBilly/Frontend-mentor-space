@@ -33,6 +33,11 @@
 
     background-color: hsla(0, 0%, 100%, 0.05);
     backdrop-filter: blur(81.5px); 
+
+    transform: translateX(0);
+}
+.nav-button{
+    display: none;
 }
 .nav-item{
     display: flex;

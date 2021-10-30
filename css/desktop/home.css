@@ -40,6 +40,7 @@
     font-size: 150px;
 }
 .body-main-text-bottom{
+    text-transform: initial;
     color: #D0D6F9;
     font-family: 'Barlow', sans-serif;
     font-size: 18px;

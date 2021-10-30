@@ -4,6 +4,7 @@ let destinations;
 let crew;
 let technology;
 let page = 0;
+let menuOpen = true;
 
 //set selectors for planet
 const planetBody     = document.querySelector('.destination-planet-body');
@@ -79,5 +80,14 @@ function changeTechnology(technologyNumber){
 }
 
 window.addEventListener('resize' , () => {
+    body.style.marginTop = '0'
+    body.style.marginLeft = '0'
     moveBody(page);
+    if(document.body.clientWidth >= 376){
+        navMenu.style.transform = 'translateX(0)';
+        navLine[0].style.transform = 'translateY(0) rotate(0deg)';
+        navLine[1].style.transform = 'rotate(0)';
+        navLine[2].style.transform = 'translateY(0) rotate(0deg)';
+        menuOpen = true;
+    }
 });

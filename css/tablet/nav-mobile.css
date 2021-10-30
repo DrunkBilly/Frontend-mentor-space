@@ -1,0 +1,70 @@
+@media only screen and (max-width:375px){    
+    .nav-container{
+        height: 100%;
+        margin: 0;
+        pointer-events: none;
+        z-index: 9999 !important;
+    }
+
+    .nav-menu{
+        position: absolute;
+        right: -100%;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 5%;
+
+        padding: 0;
+        padding-bottom: 125%;
+        height: 100%;
+        width: 85%;
+
+        transition: transform 0.2s ease-in-out;
+        pointer-events: all;
+    }
+
+    .nav-button{
+        position: absolute;
+        top: 3%;
+        right: 2%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 20%;
+        aspect-ratio: 1.5/1;
+        pointer-events: all;
+        cursor: pointer;
+    }
+    .nav-button-line{
+        /* transform-origin: 0 50%; */
+        background-color: white;
+        width: 75%;
+        aspect-ratio: 10/1;
+
+        transition: transform 0.2s linear;
+    }
+
+    .nav-logo{
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        height: calc(calc(10vh + 2%) * 0.6);
+    }
+
+    .nav-item{
+        width: 85%;
+        height: unset;
+        margin-left: 15%;
+    }
+
+    .nav-item-link::before{
+        content: "0" counter(nav-item);
+    }
+
+    .nav-item-selected{
+        background-image: linear-gradient(to right, transparent 0 97%, white 0);
+    }
+}

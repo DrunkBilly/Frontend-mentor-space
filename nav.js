@@ -4,9 +4,12 @@ const btnDestination     = document.getElementById("destination");
 const btnExplore         = document.querySelector(".body-main-explore");
 const btnCrew            = document.getElementById("crew");
 const btnTechnology      = document.getElementById("technology");
+const btnNavButton       = document.querySelector('.nav-button');
 
-const body               = document.querySelector(".body-main-info");
+const body               = document.querySelector('.body-main-info');
 const navItems           = document.getElementsByClassName('nav-item');
+const navMenu            = document.querySelector('.nav-menu');
+const navLine            = document.getElementsByClassName('nav-button-line');
 
 //Planet navigation selectors
 const btnMoon            = document.getElementById("moon");
@@ -26,37 +29,45 @@ const technologyNavItems = document.getElementsByClassName("technology-nav-item"
 btnHome.addEventListener('click', () => { //Home
     page = 0;
     moveBody(0);
+    menuOpen = false;
+    openCloseMenu();
     removeClass(navItems, 'nav-item-selected');
     btnHome.classList.add('nav-item-selected');
-})
-
+});
 btnDestination.addEventListener('click', () => { //Destinations
     page = 1;
     moveBody(1);
+    menuOpen = false;
+    openCloseMenu();
     removeClass(navItems, 'nav-item-selected');
     btnDestination.classList.add('nav-item-selected');
-})
-
+});
 btnExplore.addEventListener('click', () => { //Destinations
     page = 1;
     moveBody(1);
     removeClass(navItems, 'nav-item-selected');
     btnDestination.classList.add('nav-item-selected');
-})
-
+});
 btnCrew.addEventListener('click', () =>{ //Crew
     page = 2
     moveBody(2);
+    menuOpen = false;
+    openCloseMenu();
     removeClass(navItems, 'nav-item-selected');
     btnCrew.classList.add('nav-item-selected');
-})
-
+});
 btnTechnology.addEventListener('click', () =>{ //Crew
     page = 3;
     moveBody(3);
+    menuOpen = false;
+    openCloseMenu();
     removeClass(navItems, 'nav-item-selected');
     btnTechnology.classList.add('nav-item-selected');
-})
+});
+    //mobile menu
+btnNavButton.addEventListener('click' , () =>{
+    openCloseMenu();
+});
 
 //Planet navigation
 
@@ -121,10 +132,32 @@ technologyNavItems[2].addEventListener('click', () =>{
 });
 
 function moveBody(page){
-    if(document.body.clientWidth <= 768){
-        body.style.marginTop = page * -100 + "vh";
+    if(page < 4){
+        if(document.body.clientWidth <= 768){
+            body.style.marginTop = page * -100 + "vh";
+        }
+        else{
+            body.style.marginLeft = page * -100 + "vw";
+        }
     }
     else{
-        body.style.marginLeft = page * -100 + "vw";
+        moveBody(0);
+    }
+}
+
+function openCloseMenu(){
+    if(menuOpen){
+        navMenu.style.transform = 'translateX(-100%)';
+        navLine[0].style.transform = 'translateY(300%) rotate(45deg)';
+        navLine[1].style.transform = 'rotate(45deg)';
+        navLine[2].style.transform = 'translateY(-300%) rotate(-45deg)';
+        menuOpen = false;
+    }
+    else if(!menuOpen){
+        navMenu.style.transform = 'translateX(0)';
+        navLine[0].style.transform = 'translateY(0) rotate(0deg)';
+        navLine[1].style.transform = 'rotate(0)';
+        navLine[2].style.transform = 'translateY(0) rotate(0deg)';
+        menuOpen = true;
     }
 }
